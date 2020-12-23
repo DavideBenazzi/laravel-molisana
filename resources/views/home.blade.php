@@ -1,36 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-
-
-<h2>LUNGHE</h2>
-<div class="cards">
-        @foreach ($lunghe as $card)
-            <div class="card">
-                <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}">
-                <h3>{{ $card['titolo'] }}</h3>
-            </div>
-        @endforeach
-    </div>
-    
-    <h2>CORTE</h2>
-    <div class="cards">
-        @foreach ($corte as $card)
-            <div class="card">
-                <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}">
-                <h3>{{ $card['titolo'] }}</h3>
-            </div>
-        @endforeach
-    </div>
-   
-    <h2>CORTISSIME</h2>  
-    <div class="cards">
-        @foreach ($cortissime as $card)
-            <div class="card">
-                <img src="{{ $card['src'] }}" alt="{{ $card['titolo'] }}">
-                <h3>{{ $card['titolo'] }}</h3>
-            </div>
-        @endforeach
-    </div>
-
+{{-- SEZIONE LUNGHE --}}
+@include('partials.cards' , ['cards' => $lunghe , 'title' => 'LE LUNGHE'])
+{{-- SEZIONE CORTE --}}
+@include('partials.cards' , ['cards' => $corte , 'title' => 'LE CORTE'])
+{{-- SEZIONE CORTISSIME --}}
+@include('partials.cards' , ['cards' => $cortissime , 'title' => 'LE CORTISSIME'])
 @endsection

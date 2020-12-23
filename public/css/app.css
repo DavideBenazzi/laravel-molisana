@@ -9,6 +9,10 @@ main {
   background-color: #fff;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   width: 1170px;
   margin: 0 auto;
@@ -23,6 +27,7 @@ main {
 .cards .card {
   width: 31%;
   margin-right: 20px;
+  margin-bottom: 30px;
 }
 .cards .card img {
   width: 100%;
@@ -34,11 +39,14 @@ main {
 header {
   padding: 20px;
 }
+header img {
+  width: 20%;
+}
+header nav {
+  margin: 20px 0 20px;
+}
 
 main {
-  background-image: url("../img/pasta.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 30px;
 }
 main h2 {
